@@ -35,7 +35,7 @@ halloween();
 
 console.log(`==========`);
 
-// 5 REVISIT
+// 5
 function isEnoughCandy(pieces = arguments){
     let seasons = pieces
     if (seasons >= 31){
@@ -95,3 +95,26 @@ let costumeFunction = function (){
 costumeFunction();
 
 console.log(`==========`);
+
+// 12a
+const stephenKingMovies = [`The Shining`, `Christine`, `It`, `The Mist`, `Creepshow`, `Pet Sematary`];
+
+// 12b
+let cMovies = () => {
+    const twoMovies = stephenKingMovies.filter(function(word){
+        return word[0] === "C";
+    })
+    console.log(twoMovies);
+}
+cMovies();
+
+// 13a
+const halloweenSongs1 = [`Monster Mash`, `Thriller`];
+
+// 13b
+const halloweenSongs2 = [`I Put A Spell On You`, `This Is Halloween`, `Ghostbusters`];
+
+// 13c
+halloweenJukeBox = (songs = arguments) => {
+    songs
+}
