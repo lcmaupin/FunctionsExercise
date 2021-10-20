@@ -7,12 +7,20 @@ spookyGhost();
 console.log(`==========`);
 
 // 2
-function candy(goal = arguments){
-    for(let i = 1; i <= goal; i++){
-        console.log(`Get Candy`);
-    }
+// function candy(goal = arguments){
+//     for(let i = 1; i <= goal; i++){
+//         console.log(`Get Candy`);
+//     }
+// }
+// candy(4);
+
+function candy(goal){
+    console.log(goal);
+    console.log(goal);
+    console.log(goal);
+    console.log(goal);
 }
-candy(4);
+candy(`Get Candy`);
 
 console.log(`==========`);
 
@@ -28,28 +36,24 @@ console.log(`==========`);
 
 // 4
 function halloween(){
-    console.log(`October 31st`);
+    // console.log(`October 31st`);
     return `October 31st`;
 }
 halloween();
+console.log(halloween());
 
 console.log(`==========`);
 
 // 5
-function isEnoughCandy(pieces = arguments){
-    let seasons = pieces
-    if (seasons >= 31){
-        pieces = true;
-        console.log(pieces);
-        return pieces;
+function isEnoughCandy(pieces){
+    if (pieces >= 31){
+        return true;
     } else {
-        pieces = false;
-        console.log(pieces);
         return false;
     }
 }
-isEnoughCandy(31);
-isEnoughCandy(10);
+console.log(isEnoughCandy(31));
+console.log(isEnoughCandy(10));
 
 console.log(`==========`);
 
@@ -115,6 +119,23 @@ const halloweenSongs1 = [`Monster Mash`, `Thriller`];
 const halloweenSongs2 = [`I Put A Spell On You`, `This Is Halloween`, `Ghostbusters`];
 
 // 13c
-halloweenJukeBox = (songs = arguments) => {
-    songs
+halloweenJukeBox = (songs) => {
+    const random = Math.floor(Math.random() * songs.length);
+    console.log(songs[random]);
 }
+halloweenJukeBox(halloweenSongs1);
+halloweenJukeBox(halloweenSongs2);
+
+// 14
+caps = string => {
+    let newString = "";
+    for (i = 0; i < string.length; i++){
+        if (i % 2 === 0){
+            newString = newString + string[i].toUpperCase();
+        } else {
+            newString = newString + string[i];
+        }
+    }
+    return newString;
+}
+console.log(caps(`It's Halloween`));
